@@ -12,4 +12,13 @@ export class ProductCard {
   @Input() imagenURL: string = "";
   @Input() titulo: string = "";
   @Input() precio: number = 0;
+  @Input() descuento: number | null = null;
+  @Input() posicion?: number;
+
+  get precioConDescuento(): number {
+    if (this.descuento !== null) {
+      return this.precio - (this.precio * this.descuento / 100);
+    }
+    return this.precio;
+  }
 }

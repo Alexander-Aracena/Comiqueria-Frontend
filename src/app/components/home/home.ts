@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductSection } from '../product-section/product-section';
 import { ProductCard } from '../product-card/product-card';
+import { Producto } from '../../models/producto.interface';
 
 @Component({
   imports: [ProductSection, ProductCard],
@@ -8,4 +9,6 @@ import { ProductCard } from '../product-card/product-card';
   styleUrl: './home.css',
   templateUrl: './home.html',
 })
-export class Home {}
+export class Home {
+  productos: Producto[] = [];
+}

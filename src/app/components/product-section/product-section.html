@@ -1,40 +1,27 @@
-<!-- Hero -->
-  <section class="bg-gray-900 px-6 py-20">
-    <div class="mx-auto flex max-w-7xl flex-col items-center gap-10 lg:flex-row">
+<!-- Novedades -->
+  <section class="mx-auto max-w-7xl px-6 py-12">
 
-      <!-- Texto -->
-      <div class="flex-1 text-center lg:text-left">
-        <p class="mb-3 text-sm font-bold uppercase tracking-widest text-yellow-400">
-          Tu tienda de historietas
+    <div class="mb-8 flex items-end justify-between">
+      <div>
+        <p class="mb-2 text-sm font-bold uppercase tracking-widest text-yellow-600">
+          {{ antetitulo }}
         </p>
 
-        <h1 class="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-          Historias que merecen un lugar en tu colección
-        </h1>
-
-        <p class="mt-6 max-w-2xl text-lg text-gray-300">
-          Descubrí comics, mangas, merchandising y mucho más.
-        </p>
-
-        <div class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
-          <button
-            class="cursor-pointer rounded-lg bg-yellow-400 px-6 py-3 font-bold text-gray-900 transition hover:bg-yellow-300">
-            Ver productos
-          </button>
-
-          <button
-            class="cursor-pointer rounded-lg border border-gray-500 px-6 py-3 font-bold text-white transition hover:bg-gray-800">
-            Ver ofertas
-          </button>
-        </div>
+        <h2 class="text-3xl font-bold text-gray-900">
+          {{ titulo }}
+        </h2>
       </div>
 
-      <!-- Espacio visual -->
-      <div class="flex min-h-72 w-full flex-1 items-center justify-center rounded-2xl bg-gray-800 lg:min-h-96">
-        <span class="text-gray-500">
-          Imagen destacada
-        </span>
-      </div>
+      <button class="cursor-pointer font-semibold text-gray-600 transition hover:text-gray-900">
+        Ver todos →
+      </button>
+    </div>
 
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      @for (producto of productos; track $index) {
+        <app-product-card [categoria]="producto.categoria" [imagenURL]="producto.imagenURL" [titulo]="producto.titulo"
+        [precio]="producto.precio" [descuento]="producto.descuento" [posicion]="producto.posicion">
+        </app-product-card>
+      }
     </div>
   </section>
