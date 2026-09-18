@@ -43,192 +43,30 @@
 
   <!-- Novedades -->
   <app-product-section
-    [antetitulo]="'Recién llegados'"
-    [titulo]="'Novedades'">
-    <div producto=""></div>
+    antetitulo="Recién llegados"
+    titulo="Novedades"
+    [productos]="productosNovedades()">
   </app-product-section>
 
   <!-- Ofertas -->
-  <section class="bg-gray-900">
-    <div class="mx-auto max-w-7xl px-6 py-12">
-
-      <!-- Encabezado -->
-      <div class="mb-8 flex items-end justify-between">
-        <div>
-          <p class="mb-2 text-sm font-bold uppercase tracking-widest text-yellow-400">
-            Precios especiales
-          </p>
-
-          <h2 class="text-3xl font-bold text-white">
-            Ofertas
-          </h2>
-        </div>
-
-        <button class="cursor-pointer font-semibold text-gray-300 transition hover:text-white">
-          Ver todas →
-        </button>
-      </div>
-
-      <!-- Productos -->
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-        <!-- Producto -->
-        <app-product-card [categoria]="'Comic'" [imagenURL]="'Portada'" [titulo]="'Producto en oferta'" [precio]="25000"
-          [descuento]="20"></app-product-card>
-
-        <!-- Producto -->
-        <app-product-card [categoria]="'Manga'" [imagenURL]="'Portada'" [titulo]="'Producto en oferta'" [precio]="20000"
-          [descuento]="15"></app-product-card>
-
-        <!-- Producto -->
-        <app-product-card [categoria]="'Comic'" [imagenURL]="'Portada'" [titulo]="'Producto en oferta'" [precio]="30000"
-          [descuento]="30"></app-product-card>
-
-        <!-- Producto -->
-        <app-product-card [categoria]="'Manga'" [imagenURL]="'Portada'" [titulo]="'Producto en oferta'" [precio]="24000"
-          [descuento]="25"></app-product-card>
-
-      </div>
-    </div>
-  </section>
+  <app-product-section
+    antetitulo="Precios especiales"
+    titulo="Ofertas"
+    [productos]="productosOfertas()"
+    [variante]="'oscura'">
+  </app-product-section>
 
   <!-- Lo más vendido -->
-  <section class="mx-auto max-w-7xl px-6 py-12">
-
-    <!-- Encabezado -->
-    <div class="mb-8 flex items-end justify-between">
-      <div>
-        <p class="mb-2 text-sm font-bold uppercase tracking-widest text-yellow-600">
-          Los favoritos de nuestros clientes
-        </p>
-
-        <h2 class="text-3xl font-bold text-gray-900">
-          Lo más vendido
-        </h2>
-      </div>
-
-      <button class="cursor-pointer font-semibold text-gray-600 transition hover:text-gray-900">
-        Ver todos →
-      </button>
-    </div>
-
-    <!-- Productos -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-      <!-- Producto 1 -->
-      <app-product-card [categoria]="'Comic'" [imagenURL]="'Portada'" [titulo]="'Producto más vendido'" [precio]="28000"
-        [posicion]="1"></app-product-card>
-
-      <!-- Producto 2 -->
-      <app-product-card [categoria]="'Manga'" [imagenURL]="'Portada'" [titulo]="'Producto más vendido'" [precio]="19500"
-        [posicion]="2"></app-product-card>
-
-      <!-- Producto 3 -->
-      <app-product-card [categoria]="'Comic'" [imagenURL]="'Portada'" [titulo]="'Producto más vendido'" [precio]="31000"
-        [posicion]="3"></app-product-card>
-
-      <!-- Producto 4 -->
-      <app-product-card [categoria]="'Manga'" [imagenURL]="'Portada'" [titulo]="'Producto más vendido'" [precio]="22000"
-        [posicion]="4"></app-product-card>
-
-    </div>
-  </section>
+  <app-product-section
+    antetitulo="Los favoritos de nuestros clientes"
+    titulo="Lo más vendido"
+    [productos]="productosMasVendidos()">
+  </app-product-section>
 
   <!-- Categorías -->
-  <section class="bg-white">
-    <div class="mx-auto max-w-7xl px-6 py-12">
+  <app-category-section
+    antetitulo="Explorá nuestro catálogo"
+    titulo="Categorías">
+  </app-category-section>
 
-      <!-- Encabezado -->
-      <div class="mb-8">
-        <p class="mb-2 text-sm font-bold uppercase tracking-widest text-yellow-600">
-          Explorá nuestro catálogo
-        </p>
-
-        <h2 class="text-3xl font-bold text-gray-900">
-          Categorías
-        </h2>
-      </div>
-
-      <!-- Categorías -->
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-        <!-- Comics -->
-        <article class="group relative min-h-72 cursor-pointer overflow-hidden rounded-2xl bg-gray-900">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-600">
-            Imagen Comics
-          </div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-6">
-            <h3 class="text-2xl font-bold text-white">
-              Comics
-            </h3>
-
-            <p class="mt-2 text-sm text-gray-300">
-              Superhéroes, aventuras y mucho más
-            </p>
-          </div>
-        </article>
-
-        <!-- Manga -->
-        <article class="group relative min-h-72 cursor-pointer overflow-hidden rounded-2xl bg-gray-900">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-600">
-            Imagen Manga
-          </div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-6">
-            <h3 class="text-2xl font-bold text-white">
-              Manga
-            </h3>
-
-            <p class="mt-2 text-sm text-gray-300">
-              Historias para todos los gustos
-            </p>
-          </div>
-        </article>
-
-        <!-- Merchandising -->
-        <article class="group relative min-h-72 cursor-pointer overflow-hidden rounded-2xl bg-gray-900">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-600">
-            Imagen Merchandising
-          </div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-6">
-            <h3 class="text-2xl font-bold text-white">
-              Merchandising
-            </h3>
-
-            <p class="mt-2 text-sm text-gray-300">
-              Coleccionables y productos exclusivos
-            </p>
-          </div>
-        </article>
-
-        <!-- Misceláneos -->
-        <article class="group relative min-h-72 cursor-pointer overflow-hidden rounded-2xl bg-gray-900">
-          <div class="absolute inset-0 flex items-center justify-center text-gray-600">
-            Imagen Misceláneos
-          </div>
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-6">
-            <h3 class="text-2xl font-bold text-white">
-              Misceláneos
-            </h3>
-
-            <p class="mt-2 text-sm text-gray-300">
-              Mucho más para descubrir
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
 </main>

@@ -5,6 +5,7 @@ import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
 import { registerLocaleData } from '@angular/common';
 import localeEsAr from '@angular/common/locales/es-AR';
+import { provideHttpClient } from '@angular/common/http';
 
 registerLocaleData(localeEsAr);
 
@@ -16,6 +17,7 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: Aura
       }
-    })
+    }),
+    provideHttpClient()
   ]
 };

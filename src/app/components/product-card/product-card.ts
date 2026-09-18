@@ -1,5 +1,5 @@
 import { DecimalPipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, input, Input, computed } from '@angular/core';
 
 @Component({
   imports: [DecimalPipe],
@@ -8,17 +8,17 @@ import { Component, Input } from '@angular/core';
   templateUrl: './product-card.html',
 })
 export class ProductCard {
-  @Input() categoria: string = "";
-  @Input() imagenURL: string = "";
-  @Input() titulo: string = "";
-  @Input() precio: number = 0;
-  @Input() descuento: number | null = null;
-  @Input() posicion?: number;
+  categoria = input<string>("");
+  imagenURL = input<string>("");
+  titulo = input<string>("");
+  precio = input<number>(0);
+  descuento = input<number | null>(null);
+  posicion = input<number | undefined>(undefined);
 
-  get precioConDescuento(): number {
-    if (this.descuento !== null) {
-      return this.precio - (this.precio * this.descuento / 100);
+  precioConDescuento = computed(() => {
+    if (this.descuento() !== null) {
+      return this.precio() - (this.precio() * this.descuento()! / 100);
     }
-    return this.precio;
-  }
+    return this.precio();
+  });
 }

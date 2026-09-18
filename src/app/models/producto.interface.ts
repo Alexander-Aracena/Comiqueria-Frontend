@@ -4,6 +4,7 @@ export interface Producto {
   precio: number,
   imagenURL: string,
   categoria: string,
+  esNovedad: boolean,
   descuento: number | null,
   posicion?: number
 }

@@ -1,1 +1,44 @@
-<p>category-section works!</p>
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-12">
+
+    <!-- Encabezado -->
+    <div class="mb-8">
+      <p class="mb-2 text-sm font-bold uppercase tracking-widest text-yellow-600">
+        {{ antetitulo() }}
+      </p>
+
+      <h2 class="text-3xl font-bold text-gray-900">
+        {{ titulo() }}
+      </h2>
+    </div>
+
+    <!-- Categorías -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+      <app-category-card
+        nombre="Comics"
+        descripcion="Superhéroes, aventuras y mucho más"
+        imagenURL="Imagen Comics">
+      </app-category-card>
+
+      <app-category-card
+        nombre="Manga"
+        descripcion="Historias para todos los gustos"
+        imagenURL="Imagen Manga">
+      </app-category-card>
+
+      <app-category-card
+        nombre="Merchandising"
+        descripcion="Coleccionables y productos exclusivos"
+        imagenURL="Imagen Merchandising">
+      </app-category-card>
+
+      <app-category-card
+        nombre="Misceláneos"
+        descripcion="Mucho más para descubrir"
+        imagenURL="Imagen Misceláneos">
+      </app-category-card>
+
+    </div>
+  </div>
+</section>

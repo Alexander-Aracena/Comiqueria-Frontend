@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './category-card.css',
   templateUrl: './category-card.html',
 })
-export class CategoryCard {}
+export class CategoryCard {
+  nombre = input<string>("");
+  descripcion = input<string>("");
+  imagenURL = input<string>("");
+}

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, input, Input } from '@angular/core';
 import { ProductCard } from '../product-card/product-card';
 import { Producto } from '../../models/producto.interface';
 
@@ -9,7 +9,8 @@ import { Producto } from '../../models/producto.interface';
   templateUrl: './product-section.html',
 })
 export class ProductSection {
-  @Input() antetitulo: string = "";
-  @Input() titulo: string = "";
-  @Input() productos: Producto[] = [];
+  antetitulo = input<string>("");
+  titulo = input<string>("");
+  productos = input<Producto[]>([]);
+  variante = input<'clara' | 'oscura'>('clara');
 }

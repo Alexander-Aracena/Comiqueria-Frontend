@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "categoria": "Comic",
+    "imagenURL": "Portada",
+    "titulo": "Producto de ejemplo",
+    "precio": 18500,
+    "esNovedad": true,
+    "descuento": null
+  },
+  {
+    "id": 2,
+    "categoria": "Manga",
+    "imagenURL": "Portada",
+    "titulo": "Producto de ejemplo",
+    "precio": 18500,
+    "esNovedad": true,
+    "descuento": null
+  },
+  {
+    "id": 3,
+    "categoria": "Comic",
+    "imagenURL": "Portada",
+    "titulo": "Producto de ejemplo",
+    "precio": 32000,
+    "esNovedad": true,
+    "descuento": null
+  },
+  {
+    "id": 4,
+    "categoria": "Comic",
+    "imagenURL": "Portada",
+    "titulo": "Producto de ejemplo",
+    "precio": 21000,
+    "esNovedad": true,
+    "descuento": null
+  },
+  {
+    "id": 5,
+    "titulo": "Producto en oferta",
+    "precio": 25000,
+    "imagenURL": "Portada",
+    "categoria": "Comic",
+    "descuento": 20
+  },
+  {
+    "id": 6,
+    "titulo": "Producto en oferta",
+    "precio": 20000,
+    "imagenURL": "Portada",
+    "categoria": "Manga",
+    "descuento": 15
+  },
+  {
+    "id": 7,
+    "titulo": "Producto en oferta",
+    "precio": 30000,
+    "imagenURL": "Portada",
+    "categoria": "Comic",
+    "descuento": 30
+  },
+  {
+    "id": 8,
+    "titulo": "Producto en oferta",
+    "precio": 24000,
+    "imagenURL": "Portada",
+    "categoria": "Manga",
+    "descuento": 25
+  },
+  {
+    "id": 9,
+    "titulo": "Producto más vendido",
+    "precio": 28000,
+    "imagenURL": "Portada",
+    "categoria": "Comic",
+    "descuento": null,
+    "posicion": 1
+  },
+  {
+    "id": 10,
+    "titulo": "Producto más vendido",
+    "precio": 19500,
+    "imagenURL": "Portada",
+    "categoria": "Manga",
+    "descuento": null,
+    "posicion": 2
+  },
+  {
+    "id": 11,
+    "titulo": "Producto más vendido",
+    "precio": 31000,
+    "imagenURL": "Portada",
+    "categoria": "Comic",
+    "descuento": null,
+    "posicion": 3
+  },
+  {
+    "id": 12,
+    "titulo": "Producto más vendido",
+    "precio": 22000,
+    "imagenURL": "Portada",
+    "categoria": "Manga",
+    "descuento": null,
+    "posicion": 4
+  }
+]
