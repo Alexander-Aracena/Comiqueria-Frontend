@@ -15,29 +15,13 @@
     <!-- Categorías -->
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-      <app-category-card
-        nombre="Comics"
-        descripcion="Superhéroes, aventuras y mucho más"
-        imagenURL="Imagen Comics">
-      </app-category-card>
-
-      <app-category-card
-        nombre="Manga"
-        descripcion="Historias para todos los gustos"
-        imagenURL="Imagen Manga">
-      </app-category-card>
-
-      <app-category-card
-        nombre="Merchandising"
-        descripcion="Coleccionables y productos exclusivos"
-        imagenURL="Imagen Merchandising">
-      </app-category-card>
-
-      <app-category-card
-        nombre="Misceláneos"
-        descripcion="Mucho más para descubrir"
-        imagenURL="Imagen Misceláneos">
-      </app-category-card>
+      @for (categoria of categorias(); track categoria.id) {
+        <app-category-card
+          nombre="{{ categoria.nombre }}"
+          descripcion="{{ categoria.descripcion }}"
+          imagenURL="{{ categoria.imagenURL }}">
+        </app-category-card>
+      }
 
     </div>
   </div>

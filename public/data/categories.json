@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Comics",
+    "descripcion": "Superhéroes, aventuras y mucho más",
+    "imagenURL": "Imagen Comics"
+  },
+  {
+    "id": 2,
+    "nombre": "Manga",
+    "descripcion": "Historias para todos los gustos",
+    "imagenURL": "Imagen Manga"
+  },
+  {
+    "id": 3,
+    "nombre": "Merchandising",
+    "descripcion": "Coleccionables y productos exclusivos",
+    "imagenURL": "Imagen Merchandising"
+  },
+  {
+    "id": 4,
+    "nombre": "Misceláneos",
+    "descripcion": "Mucho más para descubrir",
+    "imagenURL": "Imagen Misceláneos"
+  }
+]
