@@ -36,7 +36,7 @@ export interface Producto {
   esNovedad: boolean,
   esVisibleEnHome: boolean,
   descuento: number | null,
-  posicion?: number,
-  estaVigente: boolean,
-  fechaAlta: Date
+  ranking?: number,
+  fechaAlta: Date,
+  fechaBaja: Date | null
 }

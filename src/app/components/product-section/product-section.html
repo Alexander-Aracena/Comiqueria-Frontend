@@ -17,8 +17,8 @@
     </div>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       @for (producto of productos(); track producto.id) {
-      <app-product-card [categoria]="producto.categoria" [imagenURL]="producto.imagenURL" [titulo]="producto.titulo"
-        [precio]="producto.precio" [descuento]="producto.descuento" [posicion]="producto.posicion">
+      <app-product-card [categoria]="producto.subcategoria.categoria.nombre" [imagenURL]="producto.tapa" [titulo]="producto.titulo"
+        [precio]="producto.precio" [descuento]="producto.descuento" [posicion]="producto.ranking">
       </app-product-card>
       }
     </div>

@@ -16,18 +16,24 @@ import { Hero } from '../hero/hero';
 export class Home implements OnInit {
   private productService = inject(ProductService);
   private categoryService = inject(CategoryService);
+  private logProductos = effect(() => {
+    console.log('Productos actualizados:', this.productos());
+    console.log('Productos más vendidos:', this.productosMasVendidos());
+  });
   categorias = signal<Categoria[]>([]);
   productos = signal<Producto[]>([]);
+  topProductos = signal<number>(4);
   productosNovedades = computed(() => this.productos().filter((producto) => producto.esNovedad));
   productosOfertas = computed(() => this.productos().filter((producto) => producto.descuento !== null));
   productosMasVendidos = computed(() =>
     this.productos()
-      .filter((producto) => producto.posicion !== undefined)
-      .sort((a, b) => a.posicion! - b.posicion!)
+      .filter((producto) => producto.ranking !== undefined)
+      .sort((a, b) => a.ranking! - b.ranking!)
+      .slice(0, this.topProductos())
   );
 
   ngOnInit(): void {
-    this.productService.getProductos().subscribe((data) => {
+    this.productService.getProductos({esVisibleEnHome: true, productosMasVendidos: true}).subscribe((data) => {
       this.productos.set(data);
     });
 

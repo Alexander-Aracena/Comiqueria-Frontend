@@ -1,7 +1,13 @@
 [
   {
     "id": 1,
-    "categoria": "Comic",
+    "subcategoria": {
+      "id": 1,
+      "categoria": {
+        "id": 1,
+        "nombre": "Comic"
+      }
+    },
     "imagenURL": "Portada",
     "titulo": "Producto de ejemplo",
     "precio": 18500,
